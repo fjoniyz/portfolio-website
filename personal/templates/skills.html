@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block content%}
+<h2 style="text-align: center; padding-bottom: 2%; padding-top: 2%;">Skills of mine</h2>
+<div class="row" style="padding-left: 22%;">
+    {% for skill in all_skills_list%}
+    <div class="card" style="width: 18rem; margin-right: 2%; margin-bottom: 2%;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: black;">{{skill.name}}</h5>
+          <p class="card-text" style="color: black;">{{skill.description}}</p>
+        </div>
+      </div>
+        {% endfor %}
+    </div>
+{%endblock content%}

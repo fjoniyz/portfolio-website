@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div style="width: 300px; margin:auto; margin-top: auto; margin-bottom: auto;">
+<p style="text-align: center;">I am a computer science student entering the third semester of my studies at the <a style="color: white;" href="https://www.tu.berlin/en/">Technical University of Berlin</a>, passionate
+    programmer with lots of other interests and hobbies. You can have a look at my projects on <a style="color: white;" href="https://github.com/fjoniyz">GitHub</a>
+    or hit me up on <a href="https://www.linkedin.com/in/fjoni-yzeiri-9770471aa/" style="color: white;">Linkedin</a>!
+</p>
+</div>
+<h4 style="text-align: center; padding-bottom: 2%;">List of some of my projects</h4>
+<div class="row" style="padding-left: 22%;">
+    {% for project in all_projects_list%}
+    <div class="card" style="width: 18rem; margin-right: 2%; margin-bottom: 2%;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: black;">{{project.titel}}</h5>
+          <p class="card-subtitle mb-2 text-muted">Technologies: {{project.technologies}}</p>
+          <p class="card-text" style="color: black;">{{project.description}}</p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+{%endblock content%}
